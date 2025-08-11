@@ -1,0 +1,135 @@
+/* VS Code specific styles */
+:root {
+    --container-padding: 20px;
+    --section-spacing: 16px;
+    --button-padding: 8px 16px;
+    --border-radius: 3px;
+}
+
+body {
+    padding: var(--container-padding);
+    color: var(--vscode-foreground);
+    background-color: var(--vscode-editor-background);
+}
+
+.container {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: var(--section-spacing);
+    color: var(--vscode-titleBar-activeForeground);
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--vscode-foreground);
+}
+
+.section {
+    margin-bottom: var(--section-spacing);
+    padding: 16px;
+    background-color: var(--vscode-sideBar-background);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--vscode-panel-border);
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.primary-button {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+.primary-button:active {
+    background-color: var(--vscode-button-background);
+    transform: translateY(1px);
+}
+
+.secondary-button {
+    background-color: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--vscode-button-border);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+.settings-button {
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--vscode-input-border);
+    cursor: pointer;
+    width: 100%;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.settings-button:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+#status-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: var(--vscode-input-background);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--vscode-input-border);
+}
+
+.status-label {
+    font-weight: 500;
+    color: var(--vscode-foreground);
+}
+
+.status-value {
+    font-family: var(--vscode-editor-font-family);
+    font-size: 0.9em;
+    color: var(--vscode-descriptionForeground);
+}
+
+/* Responsive design */
+@media (max-width: 300px) {
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+}
