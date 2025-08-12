@@ -20,7 +20,15 @@
     "onCommand:devgear.dockerBuild",
     "onCommand:devgear.dockerRun",
     "onCommand:devgear.dockerCompose",
-    "onCommand:devgear.openDevGearPanel"
+    "onCommand:devgear.openDevGearPanel",
+    "onCommand:devgear.kubernetesListPods",
+    "onCommand:devgear.kubernetesCreatePod",
+    "onCommand:devgear.kubernetesListDeployments",
+    "onCommand:devgear.kubernetesCreateDeployment",
+    "onCommand:devgear.kubernetesScaleDeployment",
+    "onCommand:devgear.kubernetesListServices",
+    "onCommand:devgear.kubernetesListNamespaces",
+    "onCommand:devgear.kubernetesCreateNamespace"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -108,6 +116,46 @@
         "title": "Setup CI/CD Pipeline",
         "category": "DevGear CI/CD",
         "icon": "$(pipeline)"
+      },
+      {
+        "command": "devgear.kubernetesListPods",
+        "title": "List Pods",
+        "category": "DevGear Kubernetes"
+      },
+      {
+        "command": "devgear.kubernetesCreatePod",
+        "title": "Create Pod",
+        "category": "DevGear Kubernetes"
+      },
+      {
+        "command": "devgear.kubernetesListDeployments",
+        "title": "List Deployments",
+        "category": "DevGear Kubernetes"
+      },
+      {
+        "command": "devgear.kubernetesCreateDeployment",
+        "title": "Create Deployment",
+        "category": "DevGear Kubernetes"
+      },
+      {
+        "command": "devgear.kubernetesScaleDeployment",
+        "title": "Scale Deployment",
+        "category": "DevGear Kubernetes"
+      },
+      {
+        "command": "devgear.kubernetesListServices",
+        "title": "List Services",
+        "category": "DevGear Kubernetes"
+      },
+      {
+        "command": "devgear.kubernetesListNamespaces",
+        "title": "List Namespaces",
+        "category": "DevGear Kubernetes"
+      },
+      {
+        "command": "devgear.kubernetesCreateNamespace",
+        "title": "Create Namespace",
+        "category": "DevGear Kubernetes"
       }
     ],
     "views": {
